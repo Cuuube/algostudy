@@ -31,6 +31,7 @@ func pileBox(box [][]int) int {
 func do(maxBox []int, box [][]int) int {
 	ret := 0
 
+	// 一次遍历+递归。得到所有可能的N叉树，然后比较N叉结果。
 	for i, currentBox := range box {
 		if !canAdd(maxBox, currentBox) {
 			continue
@@ -66,7 +67,7 @@ type Boxes [][]int
 
 func (a Boxes) Len() int      { return len(a) }
 func (a Boxes) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
-func (a Boxes) Less(i, j int) bool {
+func (a Boxes) Less(i, j int) bool { // 按长宽高最小的排序
 	if a[i][0] == a[j][0] {
 		if a[i][1] == a[j][1] {
 			return a[i][2] < a[j][2]

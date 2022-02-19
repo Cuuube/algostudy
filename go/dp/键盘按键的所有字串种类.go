@@ -6,6 +6,7 @@ func testKeyboard() {
 	fmt.Println(keyboard(5, 50))
 }
 
+// TODO
 func keyboard(k int, n int) int {
 	return doKeyboard(k, n) % 1000000007
 }
