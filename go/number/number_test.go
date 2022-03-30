@@ -20,3 +20,15 @@ func TestCheckRanges(t *testing.T) {
 	fmt.Println(checkRanges(len(q), q))
 	fmt.Println(checkRanges(len(q2), q2))
 }
+
+func TestSumThreeNumberEqualZero(t *testing.T) {
+	// q := []int{-1, 0, 1, 2, -1, -4}
+	// q2 := []int{0, 0, 0}
+	q2 := []int{-1, 0, 1, 2, -1, -4}
+	// fmt.Printf("%+v", SumThreeNumberEqualZero(q))
+	fmt.Printf("%+v", SumThreeNumberEqualZero(q2))
+}
+
+func TestMaxSwap(t *testing.T) {
+	fmt.Printf("%+v", MaxSwap(2736))
+}

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func testsubsets() {
+func Testsubsets() {
 	a := []int{9, 0, 3, 5, 7}
 	fmt.Printf("%+v", subsets(a))
 }
@@ -24,9 +24,9 @@ func subsets(nums []int) [][]int {
 	return ret
 }
 func copyArr(arr []int) []int {
-	ar := make([]int, 0)
-	ar = append(ar, arr...)
-	return ar
+	ret := make([]int, len(arr))
+	copy(ret, arr)
+	return ret
 }
 
 func subsetsError(nums []int) [][]int {
